@@ -1,5 +1,5 @@
 # caprover-action
-Action to deploy on Caprover server.
+Action to deploy on Caprover server using doecker.
 
 
 ## Inputs
@@ -16,9 +16,10 @@ Action to deploy on Caprover server.
 
 **Required** Application name on the CapRover server. Must exists.
 
-### `branch`
+### `docker`
 
-Branch which will be deployed. *Default: master*
+**Required**
+Docker image to be deployed.
 
 
 ## Example usage
@@ -28,4 +29,5 @@ with:
   server: 'https://captain.root.domain.com'
   password: '${{ secrets.CAPROVER_PASSWORD }}'
   appname: 'my-app'
+  docker: 'nginx/nginx:latest'
 ```
